@@ -18,7 +18,6 @@ a {
 
 .btn {
     display: inline-block;
-    margin-bottom: 1rem;
     color: rgba(255, 255, 255, 0.7);
     background-color: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.2);
@@ -63,15 +62,6 @@ a {
 
 
 .header {
-/*  background-color: #f1f1f1;
-  padding: 30px;
-  color: #fff;
-  text-align: center;
-  background-color: #684099;
-  background-position: center;
-  background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/header.png"); }
-*/
   padding: 160px;
   color: #fff;
   text-align: center;
@@ -79,8 +69,6 @@ a {
   background-position: center;
   background-size: cover;
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/header.png");
-
-
 }
 
 #navbar {
@@ -106,6 +94,11 @@ a {
 #navbar a.active {
   background-color: #43076E;
   color: white;
+}
+
+#navbar-right {
+  float: right;
+  text-align: center;
 }
 
 .content {
