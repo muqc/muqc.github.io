@@ -67,11 +67,19 @@ function myFunction() {
 
 
     <section class="main-content">
-        <h2><a id="welcome-to-muqc" class="anchor" href="#welcome-to-muqc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to MUQC!</h2>
-        <p>We are a <a href="https://en.wikipedia.org/wiki/Quidditch_(sport)">Quidditch</a> Club based in Manchester, home to the teams Manchester Manticores and Manchester Minotaurs. While we primarily recruit from the Manchester Universities we welcome players of all backgrounds: graduate, non-student, or otherwise. Every year we compete in <a href="https://www.quidditchuk.org">QUK</a> tournaments, attend the tournaments arranged by our neighbouring clubs, and host our own tournament Cottonopolis.</p>
+        <div id="mainwords">
+          <h2><a id="welcome-to-muqc" class="anchor" href="#welcome-to-muqc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to MUQC!</h2>
 
-        <h3><a id="about-quidditch" class="anchor" href="#about-quidditch" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is Quidditch?</h3>
-        <p>Quidditch is a mixed-gender full contact sport which draws on rugby, dodgeball, and tag. If you've never heard of the sport before then USQ <a href="https://www.usquidditch.org/about/rules">have a great summary of the rules</a> on their website. It's great fun, and as a sport and a club we pride ourselves on being inclusive to all regardless of gender, race, or background.</p>
+          <p>We are a <a href="https://en.wikipedia.org/wiki/Quidditch_(sport)">Quidditch</a> Club based in Manchester, home to the teams Manchester Manticores and Manchester Minotaurs. While we primarily recruit from the Manchester Universities we welcome players of all backgrounds: graduate, non-student, or otherwise. Every year we compete in <a href="https://www.quidditchuk.org">QUK</a> tournaments, attend the tournaments arranged by our neighbouring clubs, and host our own tournament Cottonopolis.</p>
+
+          <h3><a id="about-quidditch" class="anchor" href="#about-quidditch" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is Quidditch?</h3>
+          <p>Quidditch is a mixed-gender full contact sport which draws on rugby, dodgeball, and tag. If you've never heard of the sport before then USQ <a href="https://www.usquidditch.org/about/rules">have a great summary of the rules</a> on their website. It's great fun, and as a sport and a club we pride ourselves on being inclusive to all regardless of gender, race, or background.</p>
+        </div>
+
+        <div id="tweets">
+          <a class="twitter-timeline" data-lang="en" data-width="350" data-height="800" data-link-color="#981CEB" href="https://twitter.com/MCRQuidditch?ref_src=twsrc%5Etfw">Tweets by MCRQuidditch</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
 
         <div id="mapwords">
         <h3><a id="about-joining" class="anchor" href="#about-joining"  aria-hidden="true"><span class="octicon octicon-link"></span></a>How do I join?</h3>
@@ -83,37 +91,33 @@ function myFunction() {
         </div>
 
 
+
+
         <div id="map" style="width: 50%; height: 290px"  ></div>
 
-
          <script th:inline = "javascript">
-
-   		   function initMap() {
-   		   	var whitname = "Whitworth Park";
-          var plattname = "Platt Fields Park";
-
-             	var mcr = {lat: 53.46704613, lng: -2.22181168};
-              var whitworth = {lat: 53.45881927, lng: -2.23109222};
-              var platt = {lat: 53.44900255, lng: -2.22518446};
-
-             	var map = new google.maps.Map(document.getElementById('map'), {
-               	zoom: 12,
-               	center: mcr
-            	});
-             	var whitmarker = new google.maps.Marker({
-               	position: whitworth,
-               	map: map,
-               	label: whitname
-             	});
-              var plattmarker = new google.maps.Marker({
-               	position: platt,
-               	map: map,
-               	label: plattname
-             	});
-           }
-
+   		       function initMap() {
+   		   	      var whitname = "Whitworth Park";
+                var plattname = "Platt Fields Park";
+                var mcr = {lat: 53.46704613, lng: -2.22181168};
+                var whitworth = {lat: 53.45881927, lng: -2.23109222};
+                var platt = {lat: 53.44900255, lng: -2.22518446};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 12,
+                  center: mcr
+                });
+                var whitmarker = new google.maps.Marker({
+               	  position: whitworth,
+               	  map: map,
+               	  label: whitname
+                });
+                var plattmarker = new google.maps.Marker({
+               	  position: platt,
+               	  map: map,
+               	  label: plattname
+                });
+            }
          </script>
-
          <script async defer
          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYVwIkx1M2Gw_pIhXRAIXRXzsom5KF8zM&callback=initMap">
          </script>
